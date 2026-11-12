@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Check ASTRO's browser runtime, scientific calculations, and public astronomy data services.">
+  <title>System diagnostics · ASTRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/account.css">
+</head>
+<body data-page="diagnostics" id="top">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="ASTRO home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-toggle-lines" aria-hidden="true"></span><span class="visually-hidden">Toggle navigation</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link" data-nav="home" href="./index.html">Home</a>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="explore">Explore <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./observatory.html"><span class="menu-item-title">Observatory</span><span class="menu-item-description">Daily image and NASA archive</span></a><a class="nav-menu-item" href="./explore.html"><span class="menu-item-title">Universe search</span><span class="menu-item-description">Search planets and astronomical media</span></a><a class="nav-menu-item" href="./research.html"><span class="menu-item-title">TESS candidate field</span><span class="menu-item-description">Map and investigate TOI targets</span></a></div></div></details>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="laboratory">Laboratory <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./laboratory.html"><span class="menu-item-title">Physics calculators</span><span class="menu-item-description">Gravity, orbits, relativity, and light</span></a><a class="nav-menu-item" href="./laboratory.html#transit"><span class="menu-item-title">Transit photometry</span><span class="menu-item-description">Explore the geometry of a transit</span></a><a class="nav-menu-item" href="./simulations.html"><span class="menu-item-title">Simulations</span><span class="menu-item-description">Adjust parameters and inspect a model</span></a></div></div></details>
+      <a class="nav-link" data-nav="missions" href="./missions.html">Missions</a>
+      <a class="nav-link" data-nav="discoveries" href="./discoveries.html">Discoveries</a>
+      <a class="nav-link" data-nav="about" href="./about.html">About</a>
+    </nav>
+    <a class="header-signin" href="./signin.html" data-signin-link>Sign in</a>
+    <a class="header-account" href="./signup.html" data-account-link>Sign up</a>
+    <a class="header-search" href="./explore.html" aria-label="Search the universe"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="6.8" cy="6.8" r="4.7"></circle><path d="m10.3 10.3 3.4 3.4"></path></svg><span class="search-label">Search</span></a>
+  </div>
+</header>
+<main id="main-content">
+  <section class="page-masthead content-width">
+    <div class="eyebrow">System check</div>
+    <h1>System diagnostics</h1>
+    <p class="masthead-copy">Check the local calculation engine separately from the external data services. Local calculations do not require a network connection.</p>
+  </section>
+
+  <section class="content-width section-space diagnostics-section">
+    <div class="section-topline"><span class="eyebrow">Local application</span><span class="section-index">No network required</span></div>
+    <div id="local-diagnostic-results" class="diagnostic-list"></div>
+  </section>
+
+  <section class="content-width section-space diagnostics-section">
+    <div class="section-topline"><span class="eyebrow">Public data services</span><span class="section-index">Live browser requests</span></div>
+    <p class="diagnostic-intro">Run these checks from the Vite development server. Exoplanet Archive requests use the local development proxy; the other providers are contacted directly. A failed request can indicate a provider outage, rate limit, or network problem.</p>
+    <button id="run-diagnostics" class="button button-dark" type="button">Run service checks</button>
+    <p id="diagnostic-summary" class="status-line" aria-live="polite">Six service checks are available. Launch Library limits unauthenticated requests, so avoid rerunning checks repeatedly.</p>
+    <div id="api-diagnostic-results" class="diagnostic-list" aria-live="polite"></div>
+  </section>
+
+  <section class="content-width diagnostics-notes">
+    <div class="section-label">How to read the results</div>
+    <p><strong>Local calculations pass, API checks fail:</strong> the calculator engine is working; investigate external service access.</p>
+    <p><strong>Local calculations fail:</strong> investigate JavaScript startup or the local physics module before changing API settings.</p>
+    <p><strong>An external service fails:</strong> inspect the browser console and Network tab. Do not add an untrusted CORS proxy or place private credentials in frontend code.</p>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><span>© <span data-current-year>2026</span> ASTRO</span><span>Diagnostics · client-side tests</span><a href="#top">Back to top <span class="i i-up" aria-hidden="true"></span></a></div></footer>
+<script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

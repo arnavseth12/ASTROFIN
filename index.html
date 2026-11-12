@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Explore the universe through astronomy, astrophysics, scientific data, and the questions that remain.">
+  <title>ASTRO — Astronomy, data and tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/account.css">
+</head>
+<body data-page="home" id="top">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="ASTRO home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-toggle-lines" aria-hidden="true"></span><span class="visually-hidden">Toggle navigation</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link" data-nav="home" href="./index.html">Home</a>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="explore">Explore <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./observatory.html"><span class="menu-item-title">Observatory</span><span class="menu-item-description">Daily image and NASA archive</span></a><a class="nav-menu-item" href="./explore.html"><span class="menu-item-title">Universe search</span><span class="menu-item-description">Search planets and astronomical media</span></a><a class="nav-menu-item" href="./research.html"><span class="menu-item-title">TESS candidate field</span><span class="menu-item-description">Map and investigate TOI targets</span></a></div></div></details>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="laboratory">Laboratory <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./laboratory.html"><span class="menu-item-title">Physics calculators</span><span class="menu-item-description">Gravity, orbits, relativity, and light</span></a><a class="nav-menu-item" href="./laboratory.html#transit"><span class="menu-item-title">Transit photometry</span><span class="menu-item-description">Explore the geometry of a transit</span></a><a class="nav-menu-item" href="./simulations.html"><span class="menu-item-title">Simulations</span><span class="menu-item-description">Adjust parameters and inspect a model</span></a></div></div></details>
+      <a class="nav-link" data-nav="missions" href="./missions.html">Missions</a>
+      <a class="nav-link" data-nav="discoveries" href="./discoveries.html">Discoveries</a>
+      <a class="nav-link" data-nav="about" href="./about.html">About</a>
+    </nav>
+    <a class="header-signin" href="./signin.html" data-signin-link>Sign in</a>
+    <a class="header-account" href="./signup.html" data-account-link>Sign up</a>
+    <a class="header-search" href="./explore.html" aria-label="Search the universe"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="6.8" cy="6.8" r="4.7"></circle><path d="m10.3 10.3 3.4 3.4"></path></svg><span class="search-label">Search</span></a>
+  </div>
+</header>
+<main id="main-content">
+
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="hero-media"><img id="home-apod-image" class="hero-image" alt="" hidden><div class="hero-placeholder" id="home-apod-placeholder"><span class="placeholder-copy">Loading NASA's Astronomy Picture of the Day…</span></div></div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span>Astronomy Picture of the Day</span><span aria-hidden="true">·</span><span id="home-apod-date">NASA APOD</span></div>
+    <h1 id="home-title">The universe,<br>under observation</h1>
+    <p class="hero-apod-title" id="home-apod-title">NASA Astronomy Picture of the Day</p>
+    <p class="hero-copy" id="home-apod-caption">Explore the daily observation, read its scientific context, and open the original NASA record.</p>
+    <div class="hero-actions"><a class="button button-light" href="./observatory.html">Enter the observatory</a><a class="text-link text-link-light" href="./explore.html">Search the universe <span class="i i-right" aria-hidden="true"></span></a></div>
+  </div>
+  <div class="hero-rail"><span id="home-apod-credit">Image: NASA APOD</span><a id="home-apod-source" href="https://science.nasa.gov/solar-system/" target="_blank" rel="noreferrer">Source <span class="i i-up-right" aria-hidden="true"></span></a></div>
+</section>
+<section class="home-briefing content-width section-space">
+  <div class="section-topline"><span class="eyebrow">Daily briefing</span></div>
+  <div class="briefing-grid">
+    <article class="briefing-lead"><div class="section-label">News desk</div><h2>Recent spaceflight reporting</h2><p class="section-intro">Headlines from the spaceflight community, each linked to its publisher.</p><div id="home-news" class="news-brief-list" aria-live="polite"><p class="loading-line">Connecting to the news feed…</p></div><a class="arrow-link" href="./news.html">All space news <span class="i i-right" aria-hidden="true"></span></a></article>
+    <article class="briefing-side"><div class="section-label">Cosmic fact</div><h3 id="home-fact-title">Today’s astronomy note</h3><p id="home-fact-text" class="fact-copy">A short astronomy note, paired with a source so you can follow the science yourself.</p><a id="home-fact-source" class="source-link" href="https://science.nasa.gov/universe/" target="_blank" rel="noreferrer">Read the source <span class="i i-up-right" aria-hidden="true"></span></a></article>
+    <article class="briefing-side challenge-panel"><div class="section-label">Daily problem</div><p class="challenge-type" id="challenge-type">Today’s challenge</p><h3 id="challenge-title">Daily challenge</h3><p id="challenge-prompt" class="fact-copy">A short quiz, calculation, or word puzzle changes each day.</p><details class="answer-reveal"><summary>Reveal the explanation</summary><p id="challenge-answer">The explanation will appear here.</p></details></article>
+  </div>
+</section>
+<section class="search-band"><div class="content-width search-band-inner"><div><div class="section-label">Universe search</div><h2>Search the archive</h2><p>Search NASA's image archive or investigate a confirmed exoplanet in the scientific catalogue.</p></div><form id="home-search-form" class="search-form"><label class="visually-hidden" for="home-search">Search the universe</label><input id="home-search" name="q" type="search" placeholder="Try Andromeda, Saturn, Kepler-186f…" required><button type="submit">Search</button></form></div></section>
+<section class="home-index content-width section-space"><div class="section-topline"><span class="eyebrow">The ASTRO index</span></div><div class="index-heading"><h2>Explore by discipline</h2><p>Move between astronomical imagery, scientific catalogues, physics calculations, and interactive models.</p></div><div class="index-list">
+<a class="index-row" href="./observatory.html"><span class="index-number">01</span><span class="index-title">Observatory</span><span class="index-detail">Images, sky surveys, and NASA's visual archive</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+<a class="index-row" href="./explore.html"><span class="index-number">02</span><span class="index-title">Explore</span><span class="index-detail">Celestial objects and exoplanet catalogues</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+<a class="index-row" href="./laboratory.html"><span class="index-number">03</span><span class="index-title">Laboratory</span><span class="index-detail">Physics calculators and transit geometry</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+<a class="index-row" href="./simulations.html"><span class="index-number">04</span><span class="index-title">Simulations</span><span class="index-detail">Interactive models with their assumptions shown</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+<a class="index-row" href="./missions.html"><span class="index-number">05</span><span class="index-title">Mission control</span><span class="index-detail">Launches, spacecraft, and exploration programmes</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+<a class="index-row" href="./discoveries.html"><span class="index-number">06</span><span class="index-title">Discoveries</span><span class="index-detail">Research, context, and open questions</span><span class="index-arrow i i-right" aria-hidden="true"></span></a>
+</div></section>
+<section class="home-about-band"><div class="content-width about-band-inner"><div class="section-label">About the project</div><h2>Learn the science.<br>Follow the evidence</h2><p>ASTRO brings astronomical imagery, public catalogues, transparent calculations, and research pathways into one documented project.</p><a class="button button-outline" href="./about.html">Read about the project</a></div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a><p>An independent project for observing, understanding, and investigating the universe.</p></div>
+    <div class="footer-column"><h2>Observe</h2><a href="./observatory.html">Observatory</a><a href="./explore.html">Universe search</a><a href="./research.html">TESS candidate field</a></div>
+    <div class="footer-column"><h2>Investigate</h2><a href="./laboratory.html">Laboratory</a><a href="./simulations.html">Simulations</a><a href="./missions.html">Missions</a></div>
+    <div class="footer-column"><h2>Project</h2><a href="./discoveries.html">Discoveries</a><a href="./news.html">Space news</a><a href="./about.html">About ASTRO</a><a href="./about.html#sources">Sources &amp; data policy</a><a href="./diagnostics.html">System diagnostics</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span data-current-year>2026</span> ASTRO</span><span>Independent project · sources documented</span><a href="#top">Back to top <span class="i i-up" aria-hidden="true"></span></a></div>
+</footer>
+<script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

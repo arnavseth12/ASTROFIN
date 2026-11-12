@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Spaceflight news from the space community, with links to original publishers.">
+  <title>Space news · ASTRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/account.css">
+</head>
+<body data-page="news" id="top">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="ASTRO home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-toggle-lines" aria-hidden="true"></span><span class="visually-hidden">Toggle navigation</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link" data-nav="home" href="./index.html">Home</a>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="explore">Explore <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./observatory.html"><span class="menu-item-title">Observatory</span><span class="menu-item-description">Daily image and NASA archive</span></a><a class="nav-menu-item" href="./explore.html"><span class="menu-item-title">Universe search</span><span class="menu-item-description">Search planets and astronomical media</span></a><a class="nav-menu-item" href="./research.html"><span class="menu-item-title">TESS candidate field</span><span class="menu-item-description">Map and investigate TOI targets</span></a></div></div></details>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="laboratory">Laboratory <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./laboratory.html"><span class="menu-item-title">Physics calculators</span><span class="menu-item-description">Gravity, orbits, relativity, and light</span></a><a class="nav-menu-item" href="./laboratory.html#transit"><span class="menu-item-title">Transit photometry</span><span class="menu-item-description">Explore the geometry of a transit</span></a><a class="nav-menu-item" href="./simulations.html"><span class="menu-item-title">Simulations</span><span class="menu-item-description">Adjust parameters and inspect a model</span></a></div></div></details>
+      <a class="nav-link" data-nav="missions" href="./missions.html">Missions</a>
+      <a class="nav-link" data-nav="discoveries" href="./discoveries.html">Discoveries</a>
+      <a class="nav-link" data-nav="about" href="./about.html">About</a>
+    </nav>
+    <a class="header-signin" href="./signin.html" data-signin-link>Sign in</a>
+    <a class="header-account" href="./signup.html" data-account-link>Sign up</a>
+    <a class="header-search" href="./explore.html" aria-label="Search the universe"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="6.8" cy="6.8" r="4.7"></circle><path d="m10.3 10.3 3.4 3.4"></path></svg><span class="search-label">Search</span></a>
+  </div>
+</header>
+<main id="main-content">
+
+<section class="page-masthead content-width"><div class="eyebrow">News desk</div><h1>Space news</h1><p class="masthead-copy">A reading desk for spaceflight and astronomy coverage. Headlines link to their publishers; ASTRO does not rewrite or replace original reporting.</p></section>
+<section class="content-width section-space news-page-section"><div class="section-topline"><span class="eyebrow">Latest articles</span><span class="section-index">Spaceflight News API</span></div><div id="news-status" class="status-line" aria-live="polite">Requesting the latest articles…</div><div id="news-articles" class="article-list"></div><div class="source-note"><span class="section-label">About this feed</span><p>Articles are aggregated by The Space Devs' Spaceflight News API. Always open the original publisher for full reporting, corrections, and context.</p><a href="https://api.spaceflightnewsapi.net/v4/docs/" target="_blank" rel="noreferrer">API documentation <span class="i i-up-right" aria-hidden="true"></span></a></div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a><p>An independent project for observing, understanding, and investigating the universe.</p></div>
+    <div class="footer-column"><h2>Observe</h2><a href="./observatory.html">Observatory</a><a href="./explore.html">Universe search</a><a href="./research.html">TESS candidate field</a></div>
+    <div class="footer-column"><h2>Investigate</h2><a href="./laboratory.html">Laboratory</a><a href="./simulations.html">Simulations</a><a href="./missions.html">Missions</a></div>
+    <div class="footer-column"><h2>Project</h2><a href="./discoveries.html">Discoveries</a><a href="./news.html">Space news</a><a href="./about.html">About ASTRO</a><a href="./about.html#sources">Sources &amp; data policy</a><a href="./diagnostics.html">System diagnostics</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span data-current-year>2026</span> ASTRO</span><span>Independent project · sources documented</span><a href="#top">Back to top <span class="i i-up" aria-hidden="true"></span></a></div>
+</footer>
+<script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

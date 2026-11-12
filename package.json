@@ -1,0 +1,23 @@
+{
+  "name": "astro-observatory-platform",
+  "private": true,
+  "version": "0.3.2",
+  "type": "module",
+  "description": "An editorial astronomy and astrophysics platform built around sourced data, transparent calculations and lightweight interactive models.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0"
+  }
+}

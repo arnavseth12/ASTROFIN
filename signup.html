@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Create an ASTRO account and set up a research hub around the topics you follow.">
+  <title>Create an account · ASTRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/account.css">
+</head>
+<body data-page="signup" id="top">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="ASTRO home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-toggle-lines" aria-hidden="true"></span><span class="visually-hidden">Toggle navigation</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link" data-nav="home" href="./index.html">Home</a>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="explore">Explore <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./observatory.html"><span class="menu-item-title">Observatory</span><span class="menu-item-description">Daily image and NASA archive</span></a><a class="nav-menu-item" href="./explore.html"><span class="menu-item-title">Universe search</span><span class="menu-item-description">Search planets and astronomical media</span></a><a class="nav-menu-item" href="./research.html"><span class="menu-item-title">TESS candidate field</span><span class="menu-item-description">Map and investigate TOI targets</span></a></div></div></details>
+      <details class="nav-dropdown"><summary class="nav-link" data-nav="laboratory">Laboratory <span class="dropdown-arrow i i-down" aria-hidden="true"></span></summary><div class="nav-menu"><div class="nav-menu-grid"><a class="nav-menu-item" href="./laboratory.html"><span class="menu-item-title">Physics calculators</span><span class="menu-item-description">Gravity, orbits, relativity, and light</span></a><a class="nav-menu-item" href="./laboratory.html#transit"><span class="menu-item-title">Transit photometry</span><span class="menu-item-description">Explore the geometry of a transit</span></a><a class="nav-menu-item" href="./simulations.html"><span class="menu-item-title">Simulations</span><span class="menu-item-description">Adjust parameters and inspect a model</span></a></div></div></details>
+      <a class="nav-link" data-nav="missions" href="./missions.html">Missions</a>
+      <a class="nav-link" data-nav="discoveries" href="./discoveries.html">Discoveries</a>
+      <a class="nav-link" data-nav="about" href="./about.html">About</a>
+    </nav>
+    <a class="header-signin" href="./signin.html" data-signin-link>Sign in</a>
+    <a class="header-account" href="./signup.html" data-account-link>Sign up</a>
+    <a class="header-search" href="./explore.html" aria-label="Search the universe"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="6.8" cy="6.8" r="4.7"></circle><path d="m10.3 10.3 3.4 3.4"></path></svg><span class="search-label">Search</span></a>
+  </div>
+</header>
+<main id="main-content">
+
+<section class="page-masthead content-width"><div class="eyebrow">Create an account</div><h1>Set up your research hub</h1><p class="masthead-copy">Choose what you follow, say how you work, and finish with an email and password. Your hub opens with sources matched to your interests.</p></section>
+<section class="content-width signup-section">
+  <div class="signup-layout">
+    <div class="signup-main">
+      <ol class="step-progress" aria-label="Sign-up progress"><li data-step-dot="0">Interests</li><li data-step-dot="1">Your work</li><li data-step-dot="2">Account</li></ol>
+      <p class="step-label" id="step-label" aria-live="polite"></p>
+
+      <div data-step="0">
+        <h2 tabindex="-1">What do you follow</h2>
+        <p>Pick at least one. You can change these later from your account.</p>
+        <div class="chip-grid" id="interest-grid" role="group" aria-label="Interests"></div>
+        <p class="field-hint" id="interest-count"></p>
+        <div class="step-actions"><button class="button button-dark" type="button" id="to-step-2" disabled>Continue</button></div>
+      </div>
+
+      <div data-step="1" hidden>
+        <h2 tabindex="-1">How you work</h2>
+        <p>This shapes the starting points in your hub. Nothing here is required beyond a choice for each.</p>
+        <fieldset><legend>Where you are starting from</legend><div class="choice-grid" id="level-choices"></div></fieldset>
+        <fieldset><legend>What you want from ASTRO</legend><div class="choice-grid" id="goal-choices"></div></fieldset>
+        <label class="field" for="display-name"><span class="field-label">Display name, optional</span><input id="display-name" type="text" maxlength="60" autocomplete="nickname"></label>
+        <div class="step-actions"><button class="button button-quiet" type="button" id="back-to-1">Back</button><button class="button button-dark" type="button" id="to-step-3">Continue</button></div>
+      </div>
+
+      <div data-step="2" hidden>
+        <h2 tabindex="-1">Create your login</h2>
+        <p>Last step. Use the email you want tied to this hub.</p>
+        <form id="account-form" novalidate onsubmit="return false">
+          <label class="field" for="signup-email"><span class="field-label">Email</span><input id="signup-email" name="email" type="email" autocomplete="email" required></label>
+          <label class="field" for="signup-password"><span class="field-label">Password</span>
+            <span class="password-row"><input id="signup-password" name="password" type="password" autocomplete="new-password" required><button type="button" id="toggle-password" aria-pressed="false">Show</button></span></label>
+          <p class="field-hint" id="password-hint">At least 10 characters, with a letter and a number</p>
+          <p class="form-error" id="account-error" role="alert"></p>
+          <p class="form-note" id="storage-note">Your account and library are stored in this browser. Nothing is sent to a server, so clearing site data removes them. Export a copy from your account page.</p>
+          <p class="form-note" id="confirm-note" role="status" hidden></p>
+          <div class="step-actions"><button class="button button-quiet" type="button" id="back-to-2">Back</button><button class="button button-dark" type="submit">Create account</button></div>
+        </form>
+      </div>
+    </div>
+
+    <aside class="preview-panel" aria-label="Your hub preview"><span class="data-label">Your hub opens with</span><div id="starter-preview"></div></aside>
+  </div>
+
+  <details class="signin-panel" id="signin"><summary>Already have an account? Sign in</summary>
+    <form id="signin-form" novalidate onsubmit="return false">
+      <label class="field" for="signin-email"><span class="field-label">Email</span><input id="signin-email" name="email" type="email" autocomplete="email" required></label>
+      <label class="field" for="signin-password"><span class="field-label">Password</span><input id="signin-password" name="password" type="password" autocomplete="current-password" required></label>
+      <p class="form-error" id="signin-error" role="alert"></p>
+      <div class="form-actions"><button class="button button-dark" type="submit">Sign in</button></div>
+    </form>
+  </details>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">ASTRO</span></a><p>An independent project for observing, understanding, and investigating the universe.</p></div>
+    <div class="footer-column"><h2>Observe</h2><a href="./observatory.html">Observatory</a><a href="./explore.html">Universe search</a><a href="./research.html">TESS candidate field</a></div>
+    <div class="footer-column"><h2>Investigate</h2><a href="./laboratory.html">Laboratory</a><a href="./simulations.html">Simulations</a><a href="./missions.html">Missions</a></div>
+    <div class="footer-column"><h2>Project</h2><a href="./discoveries.html">Discoveries</a><a href="./news.html">Space news</a><a href="./about.html">About ASTRO</a><a href="./about.html#sources">Sources &amp; data policy</a><a href="./diagnostics.html">System diagnostics</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span data-current-year>2026</span> ASTRO</span><span>Independent project · sources documented</span><a href="#top">Back to top <span class="i i-up" aria-hidden="true"></span></a></div>
+</footer>
+<script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
