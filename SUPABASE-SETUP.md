@@ -20,8 +20,8 @@ Supabase hosts the database and handles sign-in. It has a free tier. Passwords a
 3. In `.env`, add these two lines with your own values:
 
 ```
-VITE_SUPABASE_URL=https://your-project-ref.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-public-key
+VITE_SUPABASE_URL=https://jybgkpabjdhokwxgbony.supabase.co/rest/v1/
+VITE_SUPABASE_ANON_KEY=sb_publishable_dXL583Rs-mnr7Jn-zPNgjQ_YxtOLBzv
 ```
 
 Never use the `service_role` key here. The anon key is meant to be public; the policies in `schema.sql` are what protect the data.

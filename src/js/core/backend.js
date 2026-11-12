@@ -7,8 +7,13 @@
  * level security in supabase/schema.sql, not the key.
  */
 
-const url = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
+/** Accepts the address as pasted, including a trailing /rest/v1/ or a space. */
+function cleanUrl(value) {
+  try { return new URL(String(value || '').trim()).origin; } catch { return ''; }
+}
+
+const url = cleanUrl(import.meta.env.VITE_SUPABASE_URL);
+const key = String(import.meta.env.VITE_SUPABASE_ANON_KEY || '').trim();
 
 export const backendEnabled = Boolean(url && key);
 
