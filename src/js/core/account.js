@@ -169,7 +169,7 @@ async function pushLibrary() {
     emitSync('saved');
   } catch (error) {
     dirty = true;
-    console.error('ASTRO library sync failed:', error);
+    console.error('Lodestar library sync failed:', error);
     emitSync('error', friendly(error, 'The last change could not be saved to the server.').message);
   }
 }
@@ -218,7 +218,7 @@ export function ready() {
       if (data.session) await hydrate(data.session.user);
     } catch (error) {
       cache.error = error;
-      console.error('ASTRO could not load your session:', error);
+      console.error('Lodestar could not load your session:', error);
     }
   })();
   return readyPromise;

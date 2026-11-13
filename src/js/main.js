@@ -1,5 +1,5 @@
 /**
- * ASTRO application entry point.
+ * Lodestar application entry point.
  * Page code is loaded on demand so an optional library used by one page
  * cannot prevent the rest of the site from starting.
  */
@@ -95,7 +95,7 @@ async function initAccountLink() {
       document.querySelector('[data-signin-link]')?.setAttribute('hidden', '');
     }
   } catch (error) {
-    console.warn('ASTRO account link unavailable:', error);
+    console.warn('Lodestar account link unavailable:', error);
   }
 }
 
@@ -130,7 +130,7 @@ function updateYear() {
 }
 
 function showRuntimeError(error) {
-  console.error('ASTRO failed to initialise:', error);
+  console.error('Lodestar failed to initialise:', error);
 
   let panel = document.getElementById('astro-runtime-error');
   if (!panel) {
@@ -139,7 +139,7 @@ function showRuntimeError(error) {
     panel.className = 'runtime-error';
     panel.setAttribute('role', 'alert');
     panel.innerHTML = `
-      <strong>ASTRO could not start this page.</strong>
+      <strong>Lodestar could not start this page.</strong>
       <p class="runtime-error-message"></p>
       <p>Open the VS Code terminal, confirm that you are in the project folder, run <code>npm install</code>, then restart with <code>npm run dev</code>.</p>
       <p>If it still fails, open the browser console (F12) and share the first red error.</p>

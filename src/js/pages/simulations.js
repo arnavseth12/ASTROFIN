@@ -8,7 +8,7 @@ export async function initSimulation() {
     THREE = await import('three');
   } catch (error) {
     host.textContent = 'The 3D library could not be loaded. Run npm install in the project folder, then restart Vite.';
-    console.error('ASTRO could not load Three.js:', error);
+    console.error('Lodestar could not load Three.js:', error);
     return;
   }
 
@@ -16,7 +16,7 @@ export async function initSimulation() {
   try {
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   } catch {
-    host.textContent = 'WebGL is not available in this browser. The other ASTRO tools remain usable.';
+    host.textContent = 'WebGL is not available in this browser. The other Lodestar tools remain usable.';
     return;
   }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25));

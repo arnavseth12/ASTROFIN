@@ -23,7 +23,7 @@ export function initSignup() {
 
   if (usesBackend) {
     document.getElementById('storage-note').textContent =
-      'Your account and library are saved to your ASTRO account, so you can sign in from any device. Export a copy from your account page any time.';
+      'Your account and library are saved to your Lodestar account, so you can sign in from any device. Export a copy from your account page any time.';
   }
 
   const panels = [...document.querySelectorAll('[data-step]')];

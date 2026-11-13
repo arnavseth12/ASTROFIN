@@ -1,4 +1,4 @@
-/* ASTRO — observatory logbook
+/* Lodestar — observatory logbook
    Night-green neutrals, one copper accent, DM Sans for reading and IBM Plex Mono
    for catalogue data. Chrome stays quiet; the colour lives in the NASA image,
    the sky-field plot and the transit curve.
@@ -143,7 +143,7 @@ small, code, .mono, .eyebrow, .section-label, .section-index, .data-label,
 }
 .brand { display: inline-flex; align-items: center; gap: 12px; flex: 0 0 auto; }
 .brand-mark { width: 8px; height: 8px; flex: 0 0 8px; background: var(--accent); transform: rotate(45deg); }
-.brand-name { color: var(--text); font: 500 1rem/1 var(--sans); letter-spacing: .16em; }
+.brand-name { color: var(--text); font: 500 1.125rem/1 var(--sans); letter-spacing: .01em; }
 .primary-nav { height: 100%; margin-left: auto; display: flex; align-items: center; gap: clamp(16px, 2.2vw, 32px); }
 .nav-link {
   position: relative;
