@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The Exoplanet Archive blocks direct browser requests, so the site asks its
+# own address and Netlify forwards the request. Same idea as the Vite dev proxy.
+[[redirects]]
+  from = "/api/exoplanet-archive/*"
+  to = "https://exoplanetarchive.ipac.caltech.edu/:splat"
+  status = 200
+  force = true
